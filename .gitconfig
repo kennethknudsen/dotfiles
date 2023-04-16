@@ -1,0 +1,25 @@
+[user]
+	name = Kenneth Knudsen
+	email = 1772806+kennethknudsen@users.noreply.github.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
+[alias]
+  rh = reset --hard HEAD
+  b = checkout -b
+  co = checkout
+  ca = commit -a --verbose
+  cp = cherry-pick
+  amend = commit -a --amend --no-edit
+  unstage = reset --soft HEAD
+  cdiff = "!git diff $1 $1^"
+[core]
+	excludesfile = /Users/kennethknudsen/dotfiles/.gitignore_global
+[init]
+	defaultBranch = main
